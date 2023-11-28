@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography, Paper, Container } from "@mui/material";
 import { styled } from "@mui/system";
-
+import Info from "./Info"
 const MainContainer = styled(Container)({
   marginTop: "2rem",
 });
@@ -100,13 +100,14 @@ const HtmlViewer = () => {
             className="col-span-6 text-center"
           >
           
-            <StyledTypography className="mb-6 text-center font-display text-5xl  md:text-left lg:text-5xl xl:text-6xl">
-              Buy and Sell Digital Art and NFT’s
-            </StyledTypography>
-            <StyledTypography className="mb-8 text-center text-lg md:text-left">
-              The world's largest digital education marketplace for crypto
-              collectibles and non-fungible tokens
-            </StyledTypography>
+          <h1
+                class="mb-6 text-center font-display text-5xl  md:text-left lg:text-5xl xl:text-6xl"
+              >
+               Learn and Earn Rare NFT in Metaverse
+              </h1>
+              <p class="mb-8 text-center text-lg md:text-left">
+              Transform your artistic creations – be it art, music, photos, in-game items, or videos – into NFTs hassle-free with our gasless marketplace.
+              </p>
             <div className="flex space-x-8">
               <StyledTypography
                 component="a"
@@ -204,6 +205,121 @@ const HtmlViewer = () => {
             </StyledTypography>
           </Grid>
         </StyledGrid>
+        <div class="relative mx-auto mt-4 mb-4">
+        <img src="img/nft-game/crypto_icons.png" class="pointer-events-none absolute -top-1/4 animate-fly" alt="" />
+        <div class="container" style={{maxWidth:"600px"}} >
+          <figure class="relative overflow-hidden rounded-3xl before:absolute before:inset-0 before:bg-jacarta-900/25">
+            <img src="img/nft-game/nft_game_video_poster.jpg"  alt="video" />
+            <a
+              href="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              data-bs-toggle="modal"
+              data-bs-target=".video-lightbox"
+              class="js-video-modal-trigger absolute top-1/2 left-1/2 flex h-24 w-24 -translate-y-1/2 -translate-x-1/2 items-center justify-center rounded-full border-2 border-white transition-transform will-change-transform hover:scale-90"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                class="h-rotate h-8 w-8 fill-white"
+              >
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path
+                  d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z"
+                ></path>
+              </svg>
+            </a>
+          </figure>
+        </div>
+      </div>
+      <Info/>
+      <section class="bg-[#010107] py-12 lg:py-24">
+        <div
+          class="container relative overflow-hidden "
+        >
+          <div class="mx-auto mb-12 max-w-lg text-center">
+          <h1
+                class="mb-6 text-center font-display text-5xl  md:text-left lg:text-5xl xl:text-6xl"
+              >
+               Learn and Earn Rare NFT in Metaverse
+              </h1>
+              <p class="mb-8 text-center text-lg md:text-left">
+              Transform your artistic creations – be it art, music, photos, in-game items, or videos – into NFTs hassle-free with our gasless marketplace.
+              </p>
+          </div>
+
+            <div class="swiper-wrapper ">
+              <div class="mb-4">
+                <div class="rounded-2.5xl bg-jacarta-800 p-10">
+                  <div class="mb-4 md:mb-0">
+                    <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8">
+                      <g clip-path="url(#clip0_1648_19589)">
+                        <path
+                          d="M18.66 23H23a9 9 0 019 9H17.998L18 34h16v-2a11.156 11.156 0 00-1.772-6H38a10 10 0 019.032 5.702C42.302 37.944 34.644 42 26 42c-5.522 0-10.2-1.18-14-3.25V20.142A13.935 13.935 0 0118.66 23zM8 18a2 2 0 011.986 1.766L10 20v18a2 2 0 01-2 2H4a2 2 0 01-2-2V20a2 2 0 012-2h4zM27.292 7.15l.708.71.708-.708a5 5 0 117.07 7.072L28 22l-7.78-7.78a5 5 0 117.072-7.07z"
+                          fill="url(#paint0_linear_1648_19589)"
+                        />
+                      </g>
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_1648_19589"
+                          x1="24.516"
+                          y1="5.669"
+                          x2="24.516"
+                          y2="42"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#8358FF" />
+                          <stop offset="1" stop-color="#FD9BFF" />
+                        </linearGradient>
+                        <clipPath id="clip0_1648_19589"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath>
+                      </defs>
+                    </svg>
+                    <h3 class="mb-4 font-display text-lg text-white">Thirdweb ERC4337 based wallet</h3>
+                    <p class="text-jacarta-300">
+                    Onboard users with wallets, build & deploy smart contracts, accept fiat with payments, and scale apps with infrastructure — on any EVM chain.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <div class="rounded-2.5xl bg-jacarta-800 p-10">
+                  <div class="mb-4 md:mb-0">
+                    <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8">
+                      <g clip-path="url(#clip0_1766_5774)">
+                        <path
+                          d="M20 39.496V32.8c0-2.566 1.99-4.584 4.934-5.736A16.963 16.963 0 0019 26c-3.78 0-7.272 1.234-10.094 3.32A16.033 16.033 0 0020 39.496zm17.76-7.324C36.97 31.106 34.34 30 31 30c-4.012 0-7 1.594-7 2.8V40a15.993 15.993 0 0013.76-7.828zM19.1 23a4.5 4.5 0 100-9 4.5 4.5 0 000 9zM31 25a4 4 0 100-8 4 4 0 000 8zm-7 19C12.954 44 4 35.046 4 24S12.954 4 24 4s20 8.954 20 20-8.954 20-20 20z"
+                          fill="url(#paint0_linear_1766_5774)"
+                        />
+                      </g>
+                      <defs>
+                        <linearGradient
+                          id="paint0_linear_1766_5774"
+                          x1="24"
+                          y1="4"
+                          x2="24"
+                          y2="44"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#8358FF" />
+                          <stop offset="1" stop-color="#FD9BFF" />
+                        </linearGradient>
+                        <clipPath id="clip0_1766_5774"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath>
+                      </defs>
+                    </svg>
+                    <h3 class="mb-4 font-display text-lg text-white">Onboard everyone to web3, instantly</h3>
+                    <p class="text-jacarta-300">
+                    Simplify NFT purchases with fiat checkouts
+                    </p>
+                  </div>
+                </div>
+              </div>
+             
+            
+            </div>
+
+          <div class="swiper-pagination-1 mt-10 text-center"></div>
+        </div>
+      </section>
     </MainContainer>
   );
 };

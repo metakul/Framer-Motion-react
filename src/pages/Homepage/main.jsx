@@ -38,10 +38,10 @@ const HtmlViewer = () => {
               <h1
                 class="mb-6 text-center font-display text-5xl  md:text-left lg:text-5xl xl:text-6xl"
               >
-                Buy and Sell Digital Art and NFT’s
+               Learn and Earn Rare NFT in Metaverse
               </h1>
               <p class="mb-8 text-center text-lg md:text-left">
-                A gasless NFT marketplace for crypto collectibles and artist
+              Transform your artistic creations – be it art, music, photos, in-game items, or videos – into NFTs hassle-free with our gasless marketplace.
               </p>
               <div class="flex space-x-4">
                 <a
@@ -126,7 +126,7 @@ const HtmlViewer = () => {
   
       <section class="bg-[#010107] py-12 lg:py-24">
         <div
-          class="container relative overflow-hidden xl:left-[calc((100vw-1202px)/4)] xl:max-w-[calc(1202px+((100vw-1202px)/2))] xl:pr-[calc((100vw-1176px)/2)]"
+          class="container relative overflow-hidden "
         >
           <div class="mx-auto mb-12 max-w-lg text-center">
             <h2 class="mb-6 text-center font-display text-3xl font-medium text-white md:text-5xl">
@@ -137,9 +137,9 @@ const HtmlViewer = () => {
             </p>
           </div>
 
-          <div class="swiper card-slider-3-columns-large-gap xl:!overflow-visible">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
+          <div class="swiper card-slider-3-columns-large-gap xl:!overflow-visible  ">
+            <div class="swiper-wrapper flex flex-row">
+              <div class="mb-4">
                 <div class="rounded-2.5xl bg-jacarta-800 p-10">
                   <div class="mb-4 md:mb-0">
                     <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8">
@@ -171,7 +171,7 @@ const HtmlViewer = () => {
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
+              <div class="mb-4">
                 <div class="rounded-2.5xl bg-jacarta-800 p-10">
                   <div class="mb-4 md:mb-0">
                     <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8">
@@ -196,82 +196,17 @@ const HtmlViewer = () => {
                         <clipPath id="clip0_1766_5774"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath>
                       </defs>
                     </svg>
-                    <h3 class="mb-4 font-display text-lg text-white">Build a driven community</h3>
+                    <h3 class="mb-4 font-display text-lg text-white">Onboard everyone to web3, instantly</h3>
                     <p class="text-jacarta-300">
-                      With millions in transactions since 2017, we’ll help you generate revenue on our platform ⁠— from
-                      direct sales to secondary sales
+                    Simplify NFT purchases with fiat checkouts
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="swiper-slide">
-                <div class="rounded-2.5xl bg-jacarta-800 p-10">
-                  <div class="mb-4 md:mb-0">
-                    <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8">
-                      <g clip-path="url(#clip0_1766_5788)">
-                        <path
-                          d="M22 4c8.136 0 14.852 6.072 15.868 13.93l4.5 7.078c.296.466.236 1.16-.45 1.456L38 28.14V34c0 2.21-1.79 4-4 4h-3.998L30 44H12v-7.388c0-2.36-.872-4.594-2.488-6.61A15.929 15.929 0 016 20c0-8.836 7.164-16 16-16zm-1.06 11.526a3.498 3.498 0 00-4.95 0 3.496 3.496 0 000 4.948L22 26.486l6.01-6.012a3.496 3.496 0 000-4.948 3.498 3.498 0 00-4.95 0L22 16.586l-1.06-1.06z"
-                          fill="url(#paint0_linear_1766_5788)"
-                        />
-                      </g>
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_1766_5788"
-                          x1="24.268"
-                          y1="4"
-                          x2="24.268"
-                          y2="44"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#8358FF" />
-                          <stop offset="1" stop-color="#FD9BFF" />
-                        </linearGradient>
-                        <clipPath id="clip0_1766_5788"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath>
-                      </defs>
-                    </svg>
-                    <h3 class="mb-4 font-display text-lg text-white">Create awareness & knowledge</h3>
-                    <p class="text-jacarta-300">
-                      With millions in transactions since 2017, we’ll help you generate revenue on our platform ⁠— from
-                      direct sales to secondary sales
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="rounded-2.5xl bg-jacarta-800 p-10">
-                  <div class="mb-4 md:mb-0">
-                    <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" class="mb-8">
-                      <g clip-path="url(#clip0_1766_5760)">
-                        <path
-                          d="M36 16h4a2 2 0 012 2v24a2 2 0 01-2 2H8a2 2 0 01-2-2V18a2 2 0 012-2h4v-2a12 12 0 0124 0v2zM22 31.464V36h4v-4.536a4 4 0 10-4 0zM32 16v-2a8 8 0 00-16 0v2h16z"
-                          fill="url(#paint0_linear_1766_5760)"
-                        />
-                      </g>
-                      <defs>
-                        <linearGradient
-                          id="paint0_linear_1766_5760"
-                          x1="24"
-                          y1="2"
-                          x2="24"
-                          y2="44"
-                          gradientUnits="userSpaceOnUse"
-                        >
-                          <stop stop-color="#8358FF" />
-                          <stop offset="1" stop-color="#FD9BFF" />
-                        </linearGradient>
-                        <clipPath id="clip0_1766_5760"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath>
-                      </defs>
-                    </svg>
-                    <h3 class="mb-4 font-display text-lg text-white">Enhancing global security</h3>
-                    <p class="text-jacarta-300">
-                      With millions in transactions since 2017, we’ll help you generate revenue on our platform ⁠— from
-                      direct sales to secondary sales
-                    </p>
-                  </div>
-                </div>
-              </div>
+             
+            
             </div>
-          </div>
+          </div> 
 
           <div class="swiper-pagination-1 mt-10 text-center"></div>
         </div>
@@ -292,15 +227,11 @@ const HtmlViewer = () => {
 
           <div class="mx-auto mt-10 max-w-md text-center">
             <form class="relative">
-              <input
-                type="email"
-                placeholder="Email address"
-                class="w-full rounded-full border border-jacarta-600 bg-jacarta-700 py-3 px-4 text-white placeholder-white focus:ring-accent"
-              />
+             
               <button
                 class="absolute top-2 right-2 rounded-full bg-accent px-6 py-2 font-display text-sm text-white hover:bg-accent-dark"
               >
-                Subscribe
+                Join Discord
               </button>
             </form>
           </div>

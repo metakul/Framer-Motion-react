@@ -3328,7 +3328,7 @@ input[type="search"]::-webkit-search-results-decoration {
   transition-property: width;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-timing-function: linear;
-  width: 100%;
+  width: 50%;
 }
 .swiper-3d .swiper-slide-shadow-left,
 .swiper-3d .swiper-slide-shadow-right {
@@ -5476,7 +5476,6 @@ html[dir="rtl"] .hover\:translate-x-1:hover {
 }
 .swiper-wrapper {
   box-sizing: content-box;
-  display: flex;
   height: 100%;
   position: relative;
   transition-property: transform;
@@ -5496,9 +5495,9 @@ html[dir="rtl"] .hover\:translate-x-1:hover {
 .swiper-slide {
   flex-shrink: 0;
   height: 100%;
-  position: relative;
   transition-property: transform;
   width: 100%;
+  margin-top: 10px;
 }
 .swiper-slide-invisible-blank {
   visibility: hidden;

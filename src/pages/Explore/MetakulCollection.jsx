@@ -1,5 +1,9 @@
 
 const MetakulCollection = () => {
+  const svgStyle = {
+    fill: '#5893f9', // Set your desired fill color here
+    height: '1em',
+  };
   return (
     <main class="pt-[3.5rem] lg:pt-8">
       <div class="relative">
@@ -57,7 +61,7 @@ const MetakulCollection = () => {
                 <div class="mb-1 text-base font-bold  dark:text-white">32</div>
                 <div class="text-2xs font-medium tracking-tight dark:text-jacarta-400">Owners</div>
               </a>
-              <a
+              {/* <a
                 href="#"
                 class="w-1/2 border-r border-jacarta-100 py-4 hover:shadow-md dark:border-jacarta-600 sm:w-32"
               >
@@ -109,35 +113,27 @@ const MetakulCollection = () => {
                   <span class="font-bold">17.2K</span>
                 </div>
                 <div class="text-2xs font-medium tracking-tight dark:text-jacarta-400">Volume Traded</div>
-              </a>
+              </a> */}
             </div>
 
             <p class="mx-auto max-w-xl text-lg dark:text-jacarta-300">
-              Unique, fully 3D and built to unite the design multiverse. Designed and styled by Digimental.
+              Unique NFT's built to unite the design multiverse. Designed and styled by Metakul. 
+              Join Discord to know about the free claiming of Metakul NFT
             </p>
 
             <div class="mt-6 flex items-center justify-center space-x-2.5">
               <div
                 class="rounded-xl border border-jacarta-100 bg-jacarta-800 hover:bg-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-jacarta-600"
               >
-                <div
-                  class="js-likes relative inline-flex h-10 w-10 cursor-pointer items-center justify-center text-sm before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
-                  role="button"
-                  data-tippy-content="Favorite"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    width="24"
-                    height="24"
-                    class="h-4 w-4 fill-jacarta-500 dark:fill-jacarta-200"
-                  >
-                    <path fill="none" d="M0 0H24V24H0z" />
-                    <path
-                      d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z"
-                    />
-                  </svg>
-                </div>
+           <div className="js-likes relative inline-flex h-10 w-10 cursor-pointer items-center justify-center text-sm">
+      <a href="https://discord.gg/wMcv6HW6VJ" target="_blank" rel="noopener noreferrer" aria-label="Discord">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" style={svgStyle}>
+          <path fill="none" d="M0 0H24V24H0z" />
+          <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/>
+        </svg>
+      </a>
+    </div>
+
               </div>
               <div
                 class="dropdown rounded-xl border border-jacarta-100 bg-jacarta-800 hover:bg-jacarta-100 dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-jacarta-600"
@@ -169,14 +165,14 @@ const MetakulCollection = () => {
                   aria-labelledby="collectionShare"
                 >
                   <a
-                    href="#"
+                    href="https://discord.gg/wMcv6HW6VJ"
                     class="flex w-full items-center rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600"
                   >
                     <svg
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fab"
-                      data-icon="facebook"
+                      data-icon="discord"
                       class="mr-2 h-4 w-4 fill-jacarta-300 group-hover:fill-accent dark:group-hover:fill-white"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"

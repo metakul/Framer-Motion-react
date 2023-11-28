@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <div>
        
-      <MainPage2/>
+      <MainPage/>
       <Partner/>
 
       
