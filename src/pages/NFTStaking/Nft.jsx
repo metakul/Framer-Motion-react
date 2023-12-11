@@ -17,13 +17,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useNavigate } from 'react-router-dom';
-import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 
-// If used on the FRONTEND pass your 'clientId'
-const sdk = new ThirdwebSDK("polygon", {
-  clientId: "YOUR_CLIENT_ID",
-});
-const contract = await sdk.getContract("0x710E9161e8A768c0605335AB632361839f761374");
 const NFTCard = styled(Card)(({ theme }) => ({
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
   margin: '0 1rem 1rem 0',
@@ -64,20 +58,16 @@ const CategoriesContainer = styled('div')({
   padding: '1rem',
 });
 
-const Staking = async() => {
+const NFTstaking = () => {
   const navigate = useNavigate();
   const [mynfts, setNfts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [openStakeDialog, setOpenStakeDialog] = useState(false);
   const [selectedNFT, setSelectedNFT] = useState(null);
   const [password, setPassword] = useState('');
   const [confirmation, setConfirmation] = useState('');
   const [isStaking, setStaking] = useState(false);
   const [stakingSuccess, setStakingSuccess] = useState(false);
-
-  const walletAddress = "undefined";
-  const balance = await contract.erc721.balanceOf(walletAddress);
-  console.log(balance);
 
   const openWallet = () => {
     navigate('/wallet');
@@ -188,4 +178,4 @@ const Staking = async() => {
   );
 };
 
-export default Staking;
+export default NFTstaking;

@@ -1,0 +1,50 @@
+[
+    
+    {
+      "id": "1",
+      "title": "Blog Post 2",
+      "author": {
+        "name": "Jane Doe",
+        "image": "path/to/another/image.jpg"
+      },
+      "date": "5 Feb",
+      "readTime": "3 min",
+      "content": [
+        "Since we launched Tezos at the end of 2021, many awesome creators. From a barely understood abbreviation (hello, right click savers!), it turned into a massive cultural phenomenon adopted by blue chip companies like Adidas and Twitter in a few short months.",
+        "Just like the NFT space has grown, so has Rarible.com. What started with a few people in a café grew into a passionate team of over 100, and counting!",
+        "And that team has been busy. In 2021, we've shipped more features than ever before, scaled to a multi-chain platform with Flow and Tezos integrations, and watched our community soar on every social media channel.",
+        "And of course, we couldn't have done it without you! You are creating Rarible day by day - by using the platform, requesting features, sharing your feedback, being as active and passionate as you are.",
+        "A Picture is Worth a Thousand Words",
+        "Ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.",
+        "Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean imperdiet. Etiam ultricies. Ut enim.",
+        "“Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis.”",
+        "— Vincent De Paul",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean imperdiet. Etiam ultricies. Ut enim."
+      ],
+      "galleryImages": [
+        "img/blog/gallery_1.jpg",
+        "img/blog/gallery_2.jpg"
+      ],
+      "relatedPosts": [
+        {
+          "id": 2,
+          "title": "Inflation is up, it matters: High prices plague Biden's",
+          "author": "DeoThemes",
+          "categories": ["NFT's", "DIGITAL ART"],
+          "date": "23 Dec",
+          "readTime": "3 min",
+          "thumbnail": "img/blog/post_6.jpg"
+        },
+        {
+          "id": 3,
+          "title": "What to do when the market is going everywhere",
+          "author": "DeoThemes",
+          "categories": ["NFT's", "DIGITAL ART"],
+          "date": "15 Dec",
+          "readTime": "3 min",
+          "thumbnail": "img/blog/post_7.jpg"
+        }
+      ]
+    }
+  ]
+  

@@ -1,12 +1,9 @@
-import { Typography } from "@mui/material";
 import Staking from "./Nft";
-const MetakulCollection = () => {
+const StakingPage = () => {
     return (
-    <>
        <Staking/>
-    </>
     );
   };
   
-  export default MetakulCollection;
+  export default StakingPage;
   

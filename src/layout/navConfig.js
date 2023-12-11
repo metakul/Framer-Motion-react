@@ -32,14 +32,14 @@ export const navConfig = [
     //   to: "wallet",
     // },
     {
-      text: "Claim NFT",
+      text: "Explore",
       icon: <ShoppingCartOutlined />,
       to: "metakul",
     },
     {
       text: "Earn With Nft",
       icon: <PieChartOutlined />,
-      to: "Staking",
+      to: "wallet",
     },
     // {
     //   text: "Metaverse",

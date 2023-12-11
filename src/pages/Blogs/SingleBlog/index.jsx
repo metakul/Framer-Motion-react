@@ -1,34 +1,33 @@
 
 const index = () => {
     return (
-        <main class="pt-[5.5rem] lg:pt-24">
-        <section class="relative py-16 md:py-24">
-          <picture class="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-            <img src="img/gradient_light.jpg" alt="gradient" class="h-full w-full" />
+        <main className="pt-[5.5rem] lg:pt-24">
+        <section className="relative py-16 md:py-24">
+          <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
+            <img src="/img/gradient_light.jpg" alt="gradient" className="h-full w-full" />
           </picture>
-          <div class="container">
-            <header class="mx-auto mb-16 max-w-lg text-center">
-              <div class="mb-3 inline-flex flex-wrap items-center space-x-1 text-xs">
-                <span class="inline-flex flex-wrap items-center space-x-1 text-accent">
+          <div className="container">
+            <header className="mx-auto mb-16 max-w-lg text-center">
+              <div className="mb-3 inline-flex flex-wrap items-center space-x-1 text-xs">
+                <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
                   <a href="single-post.html">NFT's</a>
                   <a href="single-post.html">DIGITAL ART</a>
                 </span>
               </div>
         
-              <h1 class="mb-4 font-display text-2xl text-jacarta-700 dark:text-white sm:text-5xl">
+              <h1 className="mb-4 font-display text-2xl text-jacarta-700 dark:text-white sm:text-5xl">
                 List your collection for secondary sales
               </h1>
         
-              <div class="inline-flex items-center">
-                <img src="img/blog/author.jpg" alt="author" class="mr-4 h-10 w-10 shrink-0 rounded-full" />
+              <div className="inline-flex items-center">
+                <img src="/img/blog/author.jpg" alt="author" className="mr-4 h-10 w-10 shrink-0 rounded-full" />
         
-                <div class="text-left">
-                  <span class="text-2xs font-medium tracking-tight text-jacarta-700 dark:text-jacarta-200"
-                    >Deothemes</span
-                  >
+                <div className="text-left">
+                  <span className="text-2xs font-medium tracking-tight text-jacarta-700 dark:text-jacarta-200"
+                    >Deothemes</span>
         
-                  <div class="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
-                    <span><time datetime="2022-02-05">5 Feb</time></span>
+                  <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
+                    <span><time dateTime="2022-02-05">5 Feb</time></span>
                     <span>•</span>
                     <span>3 min read</span>
                   </div>
@@ -36,13 +35,13 @@ const index = () => {
               </div>
             </header>
         
-            <figure class="mb-16">
-              <img src="img/blog/single_post_featured.jpg" alt="post 1" class="w-full rounded-2.5xl" />
+            <figure className="mb-16">
+              <img src="/img/blog/single_post_featured.jpg" alt="post 1" className="w-full rounded-2.5xl" />
             </figure>
         
-            <article class="mb-12">
-              <div class="article-content">
-                <p class="text-lg leading-normal">
+            <article className="mb-12">
+              <div className="article-content">
+                <p className="text-lg leading-normal">
                   Since we launched Tezos at the end of 2021, many awesome creator. From a barely understood abbreviation
                   (hello, right click savers!), it turned into a massive cultural phenomenon adopted by blue chip
                   companies like Adidas and Twitter in a few short months.
@@ -60,15 +59,15 @@ const index = () => {
                   And of course, we couldn't have done it without you! You are creating Rarible day by day - by using the
                   platform, requesting features, sharing your feedback, being as active and passionate as you are.
                 </p>
-                <h2 class="text-xl">A Picture is Worth a Thousand Words</h2>
+                <h2 className="text-xl">A Picture is Worth a Thousand Words</h2>
                 <p>
                   Ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
                   aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt,
                   explicabo. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                 </p>
-                <div class="article-content-wide my-12 grid grid-cols-1 gap-[1.875rem] sm:grid-cols-2">
-                  <img src="img/blog/gallery_1.jpg" alt="gallery 1" class="rounded-2lg" />
-                  <img src="img/blog/gallery_2.jpg" alt="gallery 2" class="rounded-2lg" />
+                <div className="article-content-wide my-12 grid grid-cols-1 gap-[1.875rem] sm:grid-cols-2">
+                  <img src="/img/blog/gallery_1.jpg" alt="gallery 1" className="rounded-2lg" />
+                  <img src="/img/blog/gallery_2.jpg" alt="gallery 2" className="rounded-2lg" />
                 </div>
                 <p>
                   Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
@@ -77,10 +76,10 @@ const index = () => {
                   dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis parturient montes, nascetur
                   ridiculus mus. Aenean imperdiet. Etiam ultricies. Ut enim.
                 </p>
-                <blockquote class="!my-10 text-xl italic text-jacarta-700 dark:text-white">
+                <blockquote className="!my-10 text-xl italic text-jacarta-700 dark:text-white">
                   “Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
                   quis.”
-                  <cite class="mt-3 block text-2xs not-italic tracking-tight text-jacarta-400">— Vincent De Paul</cite>
+                  <cite className="mt-3 block text-2xs not-italic tracking-tight text-jacarta-400">— Vincent De Paul</cite>
                 </blockquote>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
@@ -92,20 +91,20 @@ const index = () => {
               </div>
             </article>
         
-            <div class="mx-auto max-w-[48.125rem]">
-              <div class="mb-16 flex items-center">
-                <span class="mr-4 text-sm font-bold dark:text-jacarta-300">Share:</span>
-                <div class="flex space-x-2">
+            <div className="mx-auto max-w-[48.125rem]">
+              <div className="mb-16 flex items-center">
+                <span className="mr-4 text-sm font-bold dark:text-jacarta-300">Share:</span>
+                <div className="flex space-x-2">
                   <a
                     href="#"
-                    class="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
+                    className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
                   >
                     <svg
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fab"
                       data-icon="facebook"
-                      class="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
+                      className="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -117,14 +116,14 @@ const index = () => {
                   </a>
                   <a
                     href="#"
-                    class="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
+                    className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
                   >
                     <svg
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fab"
                       data-icon="twitter"
-                      class="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
+                      className="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -136,14 +135,14 @@ const index = () => {
                   </a>
                   <a
                     href="#"
-                    class="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
+                    className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
                   >
                     <svg
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fab"
                       data-icon="linkedin"
-                      class="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
+                      className="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
@@ -155,14 +154,14 @@ const index = () => {
                   </a>
                   <a
                     href="mailto:test@gmail.com"
-                    class="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
+                    className="group inline-flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent dark:border-jacarta-600 dark:bg-jacarta-700 dark:hover:bg-accent"
                   >
                     <svg
                       aria-hidden="true"
                       focusable="false"
                       data-prefix="fab"
                       data-icon="email"
-                      class="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
+                      className="h-4 w-4 fill-jacarta-400 transition-colors group-hover:fill-white dark:group-hover:fill-white"
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 512 512"
@@ -176,27 +175,27 @@ const index = () => {
               </div>
         
               <div
-                class="mb-16 flex rounded-2.5xl border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700"
+                className="mb-16 flex rounded-2.5xl border border-jacarta-100 bg-white p-8 dark:border-jacarta-600 dark:bg-jacarta-700"
               >
                 <img
-                  src="img/blog/author_large.jpg"
+                  src="/img/blog/author_large.jpg"
                   alt="author"
-                  class="mr-4 h-16 w-16 shrink-0 self-start rounded-lg md:mr-8 md:h-[9rem] md:w-[9rem]"
+                  className="mr-4 h-16 w-16 shrink-0 self-start rounded-lg md:mr-8 md:h-[9rem] md:w-[9rem]"
                 />
                 <div>
-                  <span class="mb-3 mt-2 block font-display text-base text-jacarta-700 dark:text-white">DeoThemes</span>
-                  <p class="mb-4 dark:text-jacarta-300">
+                  <span className="mb-3 mt-2 block font-display text-base text-jacarta-700 dark:text-white">DeoThemes</span>
+                  <p className="mb-4 dark:text-jacarta-300">
                     Aenean commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque penatibus et magnis dis
                     parturient montes.
                   </p>
-                  <div class="flex space-x-5">
-                    <a href="#" class="group">
+                  <div className="flex space-x-5">
+                    <a href="#" className="group">
                       <svg
                         aria-hidden="true"
                         focusable="false"
                         data-prefix="fab"
                         data-icon="facebook"
-                        class="h-4 w-4 fill-jacarta-400 group-hover:fill-accent dark:group-hover:fill-white"
+                        className="h-4 w-4 fill-jacarta-400 group-hover:fill-accent dark:group-hover:fill-white"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -206,13 +205,13 @@ const index = () => {
                         ></path>
                       </svg>
                     </a>
-                    <a href="#" class="group">
+                    <a href="#" className="group">
                       <svg
                         aria-hidden="true"
                         focusable="false"
                         data-prefix="fab"
                         data-icon="twitter"
-                        class="h-4 w-4 fill-jacarta-400 group-hover:fill-accent dark:group-hover:fill-white"
+                        className="h-4 w-4 fill-jacarta-400 group-hover:fill-accent dark:group-hover:fill-white"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"
@@ -222,13 +221,13 @@ const index = () => {
                         ></path>
                       </svg>
                     </a>
-                    <a href="#" class="group">
+                    <a href="#" className="group">
                       <svg
                         aria-hidden="true"
                         focusable="false"
                         data-prefix="fab"
                         data-icon="discord"
-                        class="h-4 w-4 fill-jacarta-400 group-hover:fill-accent dark:group-hover:fill-white"
+                        className="h-4 w-4 fill-jacarta-400 group-hover:fill-accent dark:group-hover:fill-white"
                         role="img"
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 640 512"
@@ -242,45 +241,44 @@ const index = () => {
                 </div>
               </div>
         
-              <h2 class="mb-8 font-display text-3xl text-jacarta-700 dark:text-white">Related Posts</h2>
-              <div class="grid grid-cols-1 gap-[1.875rem] sm:grid-cols-2">
+              <h2 className="mb-8 font-display text-3xl text-jacarta-700 dark:text-white">Related Posts</h2>
+              <div className="grid grid-cols-1 gap-[1.875rem] sm:grid-cols-2">
                 <article>
-                  <div class="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
-                    <figure class="group overflow-hidden">
+                  <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
+                    <figure className="group overflow-hidden">
                       <a href="single-post.html">
                         <img
-                          src="img/blog/post_6.jpg"
+                          src="/img/blog/post_6.jpg"
                           alt="post 6"
-                          class="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
+                          className="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
                         />
                       </a>
                     </figure>
         
                     <div
-                      class="rounded-b-[1.25rem] border border-t-0 border-jacarta-100 bg-white p-[10%] dark:border-jacarta-600 dark:bg-jacarta-700"
+                      className="rounded-b-[1.25rem] border border-t-0 border-jacarta-100 bg-white p-[10%] dark:border-jacarta-600 dark:bg-jacarta-700"
                     >
-                      <div class="mb-3 flex flex-wrap items-center space-x-1 text-xs">
-                        <a href="#" class="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
-                          >Deothemes</a
-                        >
-                        <span class="dark:text-jacarta-400">in</span>
-                        <span class="inline-flex flex-wrap items-center space-x-1 text-accent">
+                      <div className="mb-3 flex flex-wrap items-center space-x-1 text-xs">
+                        <a href="#" className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
+                          >Deothemes</a>
+                        <span className="dark:text-jacarta-400">in</span>
+                        <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
                           <a href="#">NFT's</a>
                           <a href="#">DIGITAL ART</a>
                         </span>
                       </div>
         
                       <h2
-                        class="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
+                        className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                       >
                         <a href="single-post.html">Inflation is up, it matters: High prices plague Biden's</a>
                       </h2>
-                      <p class="mb-8 dark:text-jacarta-200">
+                      <p className="mb-8 dark:text-jacarta-200">
                         Since we launched Tezos at the end of 2021, many awesome creators...
                       </p>
         
-                      <div class="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
-                        <span><time datetime="2022-02-05">23 Dec</time></span>
+                      <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
+                        <span><time dateTime="2022-02-05">23 Dec</time></span>
                         <span>•</span>
                         <span>3 min read</span>
                       </div>
@@ -288,42 +286,41 @@ const index = () => {
                   </div>
                 </article>
                 <article>
-                  <div class="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
-                    <figure class="group overflow-hidden">
+                  <div className="overflow-hidden rounded-2.5xl transition-shadow hover:shadow-lg">
+                    <figure className="group overflow-hidden">
                       <a href="single-post.html">
                         <img
-                          src="img/blog/post_7.jpg"
+                          src="/img/blog/post_7.jpg"
                           alt="post 7"
-                          class="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
+                          className="h-full w-full object-cover transition-transform duration-[1600ms] will-change-transform group-hover:scale-105"
                         />
                       </a>
                     </figure>
         
                     <div
-                      class="rounded-b-[1.25rem] border border-t-0 border-jacarta-100 bg-white p-[10%] dark:border-jacarta-600 dark:bg-jacarta-700"
+                      className="rounded-b-[1.25rem] border border-t-0 border-jacarta-100 bg-white p-[10%] dark:border-jacarta-600 dark:bg-jacarta-700"
                     >
-                      <div class="mb-3 flex flex-wrap items-center space-x-1 text-xs">
-                        <a href="#" class="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
-                          >Deothemes</a
-                        >
-                        <span class="dark:text-jacarta-400">in</span>
-                        <span class="inline-flex flex-wrap items-center space-x-1 text-accent">
+                      <div className="mb-3 flex flex-wrap items-center space-x-1 text-xs">
+                        <a href="#" className="font-display text-jacarta-700 hover:text-accent dark:text-jacarta-200"
+                          >Deothemes</a>
+                        <span className="dark:text-jacarta-400">in</span>
+                        <span className="inline-flex flex-wrap items-center space-x-1 text-accent">
                           <a href="#">NFT's</a>
                           <a href="#">DIGITAL ART</a>
                         </span>
                       </div>
         
                       <h2
-                        class="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
+                        className="mb-4 font-display text-xl text-jacarta-700 hover:text-accent dark:text-white dark:hover:text-accent"
                       >
                         <a href="single-post.html">What to do when the market is going everywhere</a>
                       </h2>
-                      <p class="mb-8 dark:text-jacarta-200">
+                      <p className="mb-8 dark:text-jacarta-200">
                         Since we launched Tezos at the end of 2021, many awesome creators...
                       </p>
         
-                      <div class="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
-                        <span><time datetime="2022-02-05">15 Dec</time></span>
+                      <div className="flex flex-wrap items-center space-x-2 text-sm text-jacarta-400">
+                        <span><time dateTime="2022-02-05">15 Dec</time></span>
                         <span>•</span>
                         <span>3 min read</span>
                       </div>

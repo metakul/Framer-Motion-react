@@ -1,0 +1,27 @@
+[
+    {
+      "title": "Amazing NFT art 1",
+      "imageSrc": "./img/products/item_1.jpg",
+      "itemLink": "item.html",
+      "historyLink": "https://example.com/history/1"
+    },
+    {
+      "title": "Amazing NFT art 2",
+      "imageSrc": "./img/products/item_2.jpg",
+      "itemLink": "item.html",
+      "historyLink": "https://example.com/history/2"
+    },
+    {
+      "title": "Amazing NFT art 3",
+      "imageSrc": "./img/products/item_3.jpg",
+      "itemLink": "item.html",
+      "historyLink": "https://example.com/history/3"
+    },
+    {
+      "title": "Amazing NFT art 4",
+      "imageSrc": "./img/products/item_4.jpg",
+      "itemLink": "item.html",
+      "historyLink": "https://example.com/history/4"
+    }
+  ]
+  
