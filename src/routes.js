@@ -11,7 +11,7 @@ import SingleBlogPost from './pages/Blogs/SingleBlog';
 import Mywallet from './pages/OwnerNFt';
 import KYCPage from './pages/KycPage';
 import Career from './pages/Career';
-
+import Mint from './pages/MintPage';
 export default function Router() {
 
     const routes = useRoutes([
@@ -27,6 +27,7 @@ export default function Router() {
                 { path: 'kyc', element: <KYCPage /> },
                 { path: 'career', element: <Career /> },
                 { path: 'wallet', element: <Mywallet /> },
+                { path: 'mint', element: <Mint /> },
             ]
         },
     ]);

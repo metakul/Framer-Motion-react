@@ -17,7 +17,7 @@ const secretKey =
   "JpSxBi9l35njYqaiIIy9CH6JNtj4yXLHxxzEoQrmRp_9SD5JJhFCM37wlelE-8OXz6tKo4fsaiz5pRN5D_lYkw";
 
 const smartWalletOptions = {
-  factoryAddress: "0x2ace847964fE70D38EA6dAd726e3A230dca244bd",
+  factoryAddress: "0x2ace847964fe70d38ea6dad726e3a230dca244bd",
   gasless: true,
 };
 // routes
@@ -32,8 +32,8 @@ export default function App() {
 
   return (
     <ThirdwebProvider
-      activeChain="mumbai"
-      clientId="010124cb5900deaf37ccf93e63fdd568"
+      activeChain="polygon"
+      clientId="ed7a4b64885c72be1dc347066f4e51ce"
       supportedWallets={[
         smartWallet(metamaskWallet(), smartWalletOptions),
         smartWallet(coinbaseWallet({ recommended: true }), smartWalletOptions),

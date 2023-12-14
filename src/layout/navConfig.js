@@ -26,11 +26,11 @@ export const navConfig = [
       icon: null,
       to: "",
     },
-    // {
-    //   text: "My Wallet",
-    //   icon: <TodayOutlined />,
-    //   to: "wallet",
-    // },
+    {
+      text: "Mint NFT",
+      icon: <TodayOutlined />,
+      to: "mint",
+    },
     {
       text: "Explore",
       icon: <ShoppingCartOutlined />,

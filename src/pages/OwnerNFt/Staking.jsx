@@ -5,11 +5,11 @@ import { useAddress } from "@thirdweb-dev/react";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
 import React, { useState, useEffect } from 'react';
 // If used on the FRONTEND pass your 'clientId'
-const sdk = new ThirdwebSDK("mumbai", {
-  clientId: "ea42a48831975e97eb6390e9ed946e26",
+const sdk = new ThirdwebSDK("polygon", {
+  clientId: "ed7a4b64885c72be1dc347066f4e51ce",
 });
 
-const contract = await sdk.getContract("0x934f5A1c2636D0Fb8a3C511f0485928F92A05681");
+const contract = await sdk.getContract("0x710E9161e8A768c0605335AB632361839f761374");
 
 
 const Mywallet = () => {
