@@ -79,7 +79,6 @@ import './career.css'
 
     return (
         <Container sx={{
-            background: theme.palette.colors.colors.primary[900]
         }}>
             <Container>
                 <Typography variant="h3" align="center" sx={{paddingTop:"40px", marginBottom: "50px" }}>

@@ -102,7 +102,7 @@ const HtmlViewer = () => {
                 is copied, it won't be the authentic and originally signed version.
               </p>
               <a
-                href="collections.html"
+                href="avatar"
                 className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
               >
                 Create Avatar

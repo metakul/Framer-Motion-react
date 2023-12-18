@@ -13,7 +13,7 @@ import "./style.css";
 
 import {Card, Timer,Timer1,MintButtonContainer,NftBoxGrid} from "./MintPage.css"
 
-const myNftDropContractAddress = "0x710E9161e8A768c0605335AB632361839f761374";
+const myNftDropContractAddress = "0x710e9161e8a768c0605335ab632361839f761374";
 
 
 
@@ -31,12 +31,13 @@ const Mint = () => {
   const { data: ownedNfts } = useOwnedNFTs(nftDrop, address);
 
   async function opensea(id) {
-    const nft = id + 1;
+    const nft = id ;
     console.log(`https://www.opensea.io/${myNftDropContractAddress}/${nft}`);
     window.open(
       `https://opensea.io/assets/matic/${myNftDropContractAddress}/${nft}`
     );
   }
+  console.log(ownedNfts)
 
  
 
@@ -98,7 +99,7 @@ const Mint = () => {
             {ownedNfts?.map((nft) => (
               <div
                 key={nft.metadata.id.toString()}
-                className="nftBox"
+                className=""
               >
                 <ThirdwebNftMedia
                   metadata={nft.metadata}

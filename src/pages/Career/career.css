@@ -2856,9 +2856,7 @@ template {
     margin-inline: auto;
   }
   
-  .accordion__item--style2 .accordion__button, .accordion__item--style2 .accordion__body {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+  
   .accordion__button {
     font-size: calc(1.275rem + 0.2571428571vw);
     background-color: #1d253b;
@@ -2917,7 +2915,6 @@ template {
   }
   .accordion__body {
     padding: 0.5rem 1.5rem 1.5rem;
-    background-color: #1d253b;
   }
   
   .rating {

@@ -10,7 +10,6 @@ export const MainContainer = styled('div')(({ theme }) => ({
     flexDirection: 'column',
     
   },
-  background:theme.palette.background
 }));
 
 export const TextSubTitle = styled('p')(({ theme }) => ({
@@ -33,7 +32,6 @@ export const ResponsiveWrapper = styled('div')(({ theme }) => ({
   },
   border:`1px solid ${theme.palette.colors.colors.grey[100]}`,
   borderRadius:"20px",
-  background:theme.palette.colors.colors.primary[900]
 
 }));
 

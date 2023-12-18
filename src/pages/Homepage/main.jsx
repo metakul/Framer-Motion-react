@@ -111,28 +111,19 @@ const HtmlViewer = () => {
             <div className="flex space-x-8">
               <StyledTypography
                 component="a"
-                href="create.html"
+                href="kyc"
                 className="w-36 rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover-bg-accent-dark"
               >
                 Upload
               </StyledTypography>
               <StyledTypography
                 component="a"
-                href="collections.html"
+                href="metakul"
                 className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover-bg-accent-dark hover-text-white hover-shadow-accent-volume"
               >
                 Explore
               </StyledTypography>
-              {/* <StyledTypography
-              sx={{
-                backgroundColor: "rgb(171 229 255)"
-              }}
-                component="a"
-                href="collections.html"
-                className="w-36 rounded-full  py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover-bg-accent-dark hover-text-white hover-shadow-accent-volume"
-              >
-                Whitepaper
-              </StyledTypography> */}
+        
             </div>
             <section className="pt-10 pb-2">
         <div className="container">
