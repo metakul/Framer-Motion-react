@@ -17,6 +17,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { useNavigate } from 'react-router-dom';
+import { useContract, useContractWrite } from "@thirdweb-dev/react";
 
 const NFTCard = styled(Card)(({ theme }) => ({
   boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
@@ -69,6 +70,9 @@ const NFTstaking = () => {
   const [isStaking, setStaking] = useState(false);
   const [stakingSuccess, setStakingSuccess] = useState(false);
 
+  const { contract } = useContract("0x7615Cc203dDe705bFD65C42CEAcA7e15eB41b11b");
+  const { mutateAsync: stake, isLoading } = useContractWrite(contract, "stake")
+
   const openWallet = () => {
     navigate('/wallet');
   };
@@ -83,29 +87,28 @@ const NFTstaking = () => {
     setOpenStakeDialog(false);
   };
 
-  // const handleStakeNFT = async () => {
-  //   setStaking(true);
-  //   try {
-  //     if (password === confirmation) {
-  //       console.log(selectedNFT.metadata.id,password)
-        
-  //       const response = await stakeNFT(selectedNFT.metadata.id, password);
-  //       console.log(response)
-  //       if (response.status === 200) {
-  //         // Staking successful
-  //         setStakingSuccess(true);
-  //       } else {
-  //         // Staking failed
-  //         console.error('Staking failed:', response.data.message);
-  //       }
-  //     }
-  //   } catch (error) {
-  //     // Handle errors as needed
-  //     console.error('Error while staking:', error);
-  //   } finally {
-  //     setStaking(false);
-  //   }
-  // };
+  const handleStakeNFT = async () => {
+    setStaking(true);
+    try {
+      if (password === confirmation) {
+        console.log(selectedNFT.metadata.id,password)
+        const data = await stake({ args: [selectedNFT.metadata.id] });
+      console.info("contract call successs", data);
+        // if (response.status === 200) {
+        //   // Staking successful
+        //   setStakingSuccess(true);
+        // } else {
+        //   // Staking failed
+        //   console.error('Staking failed:', response.data.message);
+        // }
+      }
+    } catch (error) {
+      // Handle errors as needed
+      console.error('Error while staking:', error);
+    } finally {
+      setStaking(false);
+    }
+  };
   
 
   return (
