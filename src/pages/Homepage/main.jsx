@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, Paper, Box } from "@mui/material";
+import { Grid, Typography, Paper, Box, useTheme } from "@mui/material";
 import { styled } from "@mui/system";
 import Info from "./Info"
 const MainContainer = styled(Box)({
@@ -87,6 +87,7 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
 }));
 
 const HtmlViewer = () => {
+  const theme=useTheme()
   return (
     <MainContainer>
         <StyledGrid container spacing={3}>
@@ -112,14 +113,14 @@ const HtmlViewer = () => {
               <StyledTypography
                 component="a"
                 href="kyc"
-                className="w-36 rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover-bg-accent-dark"
+                className="w-36 rounded-full bg-accent py-3 px-8 text-center font-semibold  shadow-accent-volume transition-all hover-bg-accent-dark"
               >
                 Upload
               </StyledTypography>
               <StyledTypography
                 component="a"
                 href="metakul"
-                className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover-bg-accent-dark hover-text-white hover-shadow-accent-volume"
+                className="w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover-bg-accent-dark hover- hover-shadow-accent-volume"
               >
                 Explore
               </StyledTypography>
@@ -128,7 +129,7 @@ const HtmlViewer = () => {
             <section className="pt-10 pb-2">
         <div className="container">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-2.5xl bg-jacarta-700 p-8 text-center dark:bg-jacarta-800">
+          <div style={{backgroundColor:theme.palette.colors.colors.primary[900]}} className="rounded-2.5xl  p-8 text-center ">
               <div className="mb-6 inline-flex rounded-full bg-[#FFD0D0] p-3">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-red">
                   <svg
@@ -146,9 +147,9 @@ const HtmlViewer = () => {
                 </div>
               </div>
               <h3 className="mb-4 font-display text-lg">$0</h3>
-              <p className="dark:text-jacarta-300">Zero transaction fees</p>
+              <p className="dark:">Zero transaction fees</p>
             </div>
-            <div className="rounded-2.5xl bg-jacarta-700 p-8 text-center dark:bg-jacarta-800">
+            <div style={{backgroundColor:theme.palette.colors.colors.primary[900]}}  className="rounded-2.5xl  p-8 text-center ">
               <div className="mb-6 inline-flex rounded-full bg-[#CDBCFF] p-3">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-accent">
                   <svg
@@ -165,14 +166,14 @@ const HtmlViewer = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="mb-4 font-display text-lg  dark:text-white">777 NFT</h3>
-              <p className="dark:text-jacarta-300">Roaming In Web3 For Gasless Mint</p>
+              <h3 className="mb-4 font-display text-lg  dark:">777 NFT</h3>
+              <p className="dark:">Roaming In Web3 For Gasless Mint</p>
             </div>
           
        
         
           
-            <div className="rounded-2.5xl bg-jacarta-700 p-8 text-center dark:bg-jacarta-800">
+            <div  style={{backgroundColor:theme.palette.colors.colors.primary[900]}} className="rounded-2.5xl  p-8 text-center ">
               <div className="mb-6 inline-flex rounded-full bg-[#C4F2E3] p-3">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green">
                   <svg
@@ -190,9 +191,9 @@ const HtmlViewer = () => {
                 </div>
               </div>
               <h3 className="mb-4 font-display text-lg  ">$7 M</h3>
-              <p className="dark:text-jacarta-300">CryptoCurrency Supply</p>
+              <p className="dark:">CryptoCurrency Supply</p>
             </div>
-            <div className="rounded-2.5xl bg-jacarta-700 p-8 text-center dark:bg-jacarta-800">
+            <div style={{backgroundColor:theme.palette.colors.colors.primary[900]}} className="rounded-2.5xl  p-8 text-center ">
               <div className="mb-6 inline-flex rounded-full bg-[#CDDFFB] p-3">
                 <div className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-blue">
                   <svg
@@ -210,7 +211,7 @@ const HtmlViewer = () => {
                 </div>
               </div>
               <h3 className="mb-4 font-display text-lg">7,777 LAND</h3>
-              <p className="dark:text-jacarta-300">Download our app and register users in 3 minutes</p>
+              <p className="dark:">Download our app and register users in 3 minutes</p>
             </div>
        
        
@@ -223,13 +224,13 @@ const HtmlViewer = () => {
           <Grid
             item
             xs={12}
-            sm={12}
+            sm={8}
             md={5}
             lg={5}
-            className="col-span-6 text-center">
+            className="col-span-6 text-center flex flex-center">
             <StyledTypography className="relative text-center sm:text-right">
               <svg
-                viewBox="0 0 200 200"
+                viewBox="0 0 120 120"
                 xmlns="http://www.w3.org/2000/svg"
                 className="mt-2 inline-block w-72 rotate-[8deg] sm:w-full lg:w-[24rem] xl:w-[35rem]"
               >
@@ -273,7 +274,7 @@ const HtmlViewer = () => {
 
         <div className="container mt-20" style={{maxWidth:"600px"}} >
           <figure className="relative overflow-hidden rounded-3xl before:absolute before:inset-0 before:bg-jacarta-900/25">
-            <img src="img/nft-game/nft_game_video_poster.jpg"  alt="video" />
+            <img src="img/nft-game/nft_game_video_poster.jpg" className="h-auto w-full"  alt="video" />
             <a
               href="https://www.youtube.com/embed/tJReogx1pv8"
               target="_blank"
@@ -298,7 +299,7 @@ const HtmlViewer = () => {
         </div>
       </div>
       <Info/>
-      <section className="bg-[#010107] py-12 lg:py-24">
+      <section className=" py-12 lg:py-24 rounded-2xl" style={{backgroundColor:theme.palette.colors.colors.primary[900]}}>
         <div
           className="container relative overflow-hidden "
         >
@@ -317,7 +318,7 @@ const HtmlViewer = () => {
 
             <div className=" ">
               <div className="mb-4">
-                <div className="rounded-2.5xl bg-jacarta-800 p-10">
+                <div className="rounded-2.5xl  p-10"  style={{backgroundColor:theme.palette.colors.colors.primary[800]}}>
                   <div className="mb-4 md:mb-0">
                     <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-8">
                       <g clip-path="url(#clip0_1648_19589)">
@@ -341,9 +342,9 @@ const HtmlViewer = () => {
                         <clipPath id="clip0_1648_19589"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath>
                       </defs>
                     </svg>
-                    <h3 className="mb-4 font-display text-lg text-white">Thirdweb ERC4337 based wallet</h3>
-                    <p className="text-jacarta-300">
-                    Onboard users with wallets, build & deploy smart contracts, accept fiat with payments, and scale apps with infrastructure — on any EVM chain.
+                    <h3 className="mb-4 font-display text-lg "> ERC4337 wallet</h3>
+                    <p className="">
+                    Onboard users with METAKUL, claim & stake NFTS without hassle of GasFee, accept fiat with payments, and scale community with infrastructure — on POLYGON EVM chain.
                     </p>
                   </div>
                 </div>
@@ -351,7 +352,7 @@ const HtmlViewer = () => {
            
              
               <div className="mb-4">
-                <div className="rounded-2.5xl bg-jacarta-800 p-10">
+                <div className="rounded-2.5xl  p-10" style={{backgroundColor:theme.palette.colors.colors.primary[800]}}>
                   <div className="mb-4 md:mb-0">
                     <svg width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg" className="mb-8">
                       <g clip-path="url(#clip0_1766_5774)">
@@ -375,8 +376,8 @@ const HtmlViewer = () => {
                         <clipPath id="clip0_1766_5774"><path fill="#fff" d="M0 0h48v48H0z" /></clipPath>
                       </defs>
                     </svg>
-                    <h3 className="mb-4 font-display text-lg text-white">Onboard everyone to web3, instantly</h3>
-                    <p className="text-jacarta-300">
+                    <h3 className="mb-4 font-display text-lg ">Onboard everyone to web3, instantly</h3>
+                    <p className="">
                     Simplify NFT purchases with fiat checkouts
                     </p>
                   </div>

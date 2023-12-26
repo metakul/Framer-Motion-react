@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import mockData from "./mockData.json"
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
 import { useAddress } from "@thirdweb-dev/react";
+import { useTheme } from "@mui/material";
 
 // If used on the FRONTEND pass your 'clientId'
 const sdk = new ThirdwebSDK("polygon", {
@@ -15,6 +16,7 @@ const MetakulCollection = () => {
   const walletAddress = useAddress();
   const [balance, setBalance] = useState(null);
   console.log(walletAddress);
+  const theme=useTheme()
 
   useEffect(() => {
     const fetchBalance = async () => {
@@ -44,7 +46,7 @@ const MetakulCollection = () => {
         <img src="img/collections/collection_banner.jpg" alt="banner" className="h-[18.75rem] object-cover" />
       </div>
 
-      <section className="relative bg-jacarta-800 pb-12 pt-28 dark:bg-jacarta-800">
+      <section className="relative pb-12 pt-28 dark:bg-jacarta-800" style={{backgroundColor:theme.palette.colors.colors.primary[900]}}>
         <div className="absolute left-1/2 top-0 z-10 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center">
           <figure className="relative">
             <img
@@ -79,24 +81,22 @@ const MetakulCollection = () => {
             </div>
 
             <div
-              className="mb-8 inline-flex flex-wrap items-center justify-center rounded-xl border border-jacarta-100 bg-jacarta-800 dark:border-jacarta-600 dark:bg-jacarta-800"
+              className="mb-8 inline-flex flex-wrap items-center justify-center rounded-xl border border-jacarta-100 "
             >
-              <a
-                href="#"
+              <div
                 className="w-1/2 rounded-l-xl border-r border-jacarta-100 py-4 hover:shadow-md dark:border-jacarta-600 sm:w-32"
+                style={{backgroundColor:theme.palette.colors.colors.primary[900]}}
               >
                 <div className="mb-1 text-base font-bold  dark:text-white">777</div>
                 <div className="text-2xs font-medium tracking-tight dark:text-jacarta-400">Items</div>
-              </a>
-              <a
-                href="#"
+              </div>
+              <div
                 className="w-1/2 border-jacarta-100 py-4 hover:shadow-md dark:border-jacarta-600 sm:w-32 sm:border-r"
               >
                 <div className="mb-1 text-base font-bold  dark:text-white">32</div>
                 <div className="text-2xs font-medium tracking-tight dark:text-jacarta-400">Owners</div>
-              </a>
-              <a
-                href="#"
+              </div>
+              <div
                 className="w-1/2 border-r border-jacarta-100 py-4 hover:shadow-md dark:border-jacarta-600 sm:w-32"
               >
                 <div
@@ -122,8 +122,8 @@ const MetakulCollection = () => {
                   <span className="font-bold">2.55</span>
                 </div>
                 <div className="text-2xs font-medium tracking-tight dark:text-jacarta-400">Floor Price</div>
-              </a>
-              <a href="#" className="w-1/2 rounded-r-xl border-jacarta-100 py-4 hover:shadow-md sm:w-32">
+              </div>
+              <div  className="w-1/2 rounded-r-xl border-jacarta-100 py-4 hover:shadow-md sm:w-32" style={{backgroundColor:theme.palette.colors.colors.primary[900]}}>
                 <div
                   className="mb-1 flex items-center justify-center text-base font-medium  dark:text-white"
                 >
@@ -147,7 +147,7 @@ const MetakulCollection = () => {
                   <span className="font-bold">17.2K</span>
                 </div>
                 <div className="text-2xs font-medium tracking-tight dark:text-jacarta-400">Volume Traded</div>
-              </a>
+              </div>
             </div>
 
             <p className="mx-auto max-w-xl text-lg dark:text-jacarta-300">
@@ -207,7 +207,7 @@ const MetakulCollection = () => {
 
             <li className="nav-item" role="presentation">
               <button
-                className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover: dark:hover:text-white"
+                className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover: dark:"
                 id="activity-tab"
                 data-bs-toggle="tab"
                 data-bs-target="#activity"
@@ -215,6 +215,7 @@ const MetakulCollection = () => {
                 role="tab"
                 aria-controls="activity"
                 aria-selected="false"
+                style={{backgroundColor:theme.palette.colors.colors.primary[900]}}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -239,10 +240,11 @@ const MetakulCollection = () => {
                 <div className="flex flex-wrap items-center">
                   <div className="my-1 mr-2.5">
                     <button
-                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
+                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent   dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
                       id="blockchainFilter"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      style={{backgroundColor:theme.palette.colors.colors.primary[900]}}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -263,10 +265,11 @@ const MetakulCollection = () => {
 
                   <div className="my-1 mr-2.5">
                     <button
-                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
+                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent hover:bg-accent  dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
                       id="categoriesFilter"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      style={{backgroundColor:theme.palette.colors.colors.primary[900]}}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -286,10 +289,11 @@ const MetakulCollection = () => {
                   </div>
                   <div className="my-1 mr-2.5">
                     <button
-                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
+                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent hover:bg-accent  dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
                       id="saleTypeFilter"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
+                      style={{backgroundColor:theme.palette.colors.colors.primary[900]}}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -309,11 +313,12 @@ const MetakulCollection = () => {
                   </div>
                   <div className="my-1 mr-2.5">
                     <button
-                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
+                      className="dropdown-toggle group group flex h-9 items-center rounded-lg border border-jacarta-100 bg-jacarta-800 px-4 font-display text-sm font-semibold  transition-colors hover:border-transparent hover:bg-accent  dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
                       id="priceRangeFilter"
                       data-bs-toggle="dropdown"
                       data-bs-auto-close="outside"
                       aria-expanded="false"
+                      style={{backgroundColor:theme.palette.colors.colors.primary[900]}}
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -341,7 +346,7 @@ const MetakulCollection = () => {
                 {balance && balance.length > 0 ? (
                   balance.map((item, index) => (
                     <article key={index}>
-                      <div className="block rounded-2.5xl border border-jacarta-100 bg-jacarta-800 p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                      <div className="block rounded-2.5xl border border-jacarta-100 p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" style={{backgroundColor:theme.palette.colors.colors.primary[900]}}>
                         <figure className="relative">
                           <a href={item.metadata.name}>
                             <img
@@ -470,7 +475,7 @@ const MetakulCollection = () => {
                 ) : (
                   <div className=" flex flex-row">
                     <button
-                      className="dropdown-toggle m-4 p-4 group group flex  items-center rounded-lg border border-jacarta-100 bg-primary  font-display text-lg font-semibold  transition-colors hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
+                      className="dropdown-toggle m-4 p-4 group group flex  items-center rounded-lg border border-jacarta-100 bg-primary  font-display text-lg font-semibold  transition-colors hover:border-transparent hover:bg-accent  dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:bg-accent"
 
                     >
 

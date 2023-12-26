@@ -202,7 +202,6 @@ video {
   display: block;
   vertical-align: middle;
 }
-img,
 video {
   height: auto;
   max-width: 100%;

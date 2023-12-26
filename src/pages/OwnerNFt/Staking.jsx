@@ -5,7 +5,7 @@ import { useAddress } from "@thirdweb-dev/react";
 import { useContract, useContractRead, useContractWrite } from "@thirdweb-dev/react";
 import React, { useState, useEffect } from 'react';
 import { Web3Button } from "@thirdweb-dev/react";
-import { Button } from "@mui/material";
+import { Button, useTheme } from "@mui/material";
 // If used on the FRONTEND pass your 'clientId'
 const sdk = new ThirdwebSDK("polygon", {
   clientId: "ed7a4b64885c72be1dc347066f4e51ce",
@@ -18,6 +18,7 @@ const Mywallet = () => {
   const [balance, setBalance] = useState(null);
   const [loading, setLoading] = useState(true); // New loading state
   const { stakingcontract } = useContract("0x7615Cc203dDe705bFD65C42CEAcA7e15eB41b11b");
+  const theme=useTheme()
   const { mutateAsync: stake, isLoading } = useContractWrite(stakingcontract, "stake")
   useEffect(() => {
     const fetchBalance = async () => {
@@ -70,7 +71,7 @@ const Mywallet = () => {
                 ) : balance && balance.length > 0 ? (
                   balance.map((item, index) => (
                     <article key={index}>
-                      <div className="block rounded-2.5xl border border-jacarta-100 bg-jacarta-800 p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                      <div className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" style={{backgroundColor:theme.palette.colors.colors.primary[900]}}>
                         <figure className="relative">
                           <a href={item.metadata.name}>
                             <img
@@ -81,7 +82,7 @@ const Mywallet = () => {
                             />
                           </a>
                           <div
-                            className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-jacarta-800 p-2 dark:bg-jacarta-700"
+                            className="absolute top-3 right-3 flex items-center space-x-1 rounded-md  p-2 dark:bg-jacarta-700"
                           >
                             <span
                               className="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"
@@ -195,7 +196,7 @@ const Mywallet = () => {
                 ) : (
                   <>
                     <article>
-                      <div className="block rounded-2.5xl border border-jacarta-100 bg-jacarta-800 p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                      <div style={{background:theme.palette.colors.colors.primary[900]}} className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" >
                         <figure className="relative">
                           <img
                             src="./img/products/item_3.jpg"
@@ -203,8 +204,8 @@ const Mywallet = () => {
                             className="w-full rounded-[0.625rem]"
                             loading="lazy"
                           />
-                          <div
-                            className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-jacarta-800 p-2 dark:bg-jacarta-700"
+                          <div style={{background:theme.palette.colors.colors.primary[500]}}
+                            className="absolute top-3 right-3 flex items-center space-x-1 rounded-md  p-2 dark:bg-jacarta-700"
                           >
                             <span
                               className="js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0"

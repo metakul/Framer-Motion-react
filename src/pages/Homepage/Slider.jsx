@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import { useTheme } from '@mui/material';
 
 SwiperCore.use([Navigation, Pagination]);
 
@@ -15,6 +16,7 @@ const NftSlider = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+  const theme=useTheme()
 
   const images = [
     'img/nft-game/nft_game_character_1.png',
@@ -27,11 +29,11 @@ const NftSlider = () => {
   return (
     <section className="relative pb-6 pt-6 lg:py-12">
       <div className="container">
-        <h2 className="mx-auto mb-16 max-w-md text-center font-display text-3xl text-white">
+        <h2 className="mx-auto mb-16 max-w-lg text-center font-display text-3xl ">
           Collect Them All. Be the True Ownership for Players
         </h2>
       </div>
-      <div className=" px-6 pb-16 sm:px-0 w-half mx-auto " style={{maxWidth:"500px"}}>
+      <div className=" px-6 pb-16 sm:px-0 w-half mx-auto " style={{maxWidth:"600px"}}>
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
@@ -43,13 +45,13 @@ const NftSlider = () => {
             <SwiperSlide key={index}>
               <article className="animate__animated animate__fadeIn">
                 <div className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg">
-                  <div className="rounded-[1.125rem] bg-jacarta-900 p-8">
+                  <div style={{backgroundColor:theme.palette.colors.colors.primary[900]}} className="rounded-[1.125rem] ">
                     <figure className="relative my-4 mb-14">
-                      <img src={image} alt={`item ${index + 1}`} className="swiper-lazy inline-block" height="212" width="182" />
+                      <img src={image} alt={`item ${index + 1}`} className="swiper-lazy inline-block" height="320" width="320" />
                       <div className="swiper-lazy-preloader"></div>
                     </figure>
-                    <div className="relative rounded-2lg bg-jacarta-700 p-5">
-                      <h3 className="mb-3 text-lg font-semibold leading-none text-white">Character {index + 1}</h3>
+                    <div style={{backgroundColor:theme.palette.colors.colors.primary[800], marginLeft:"auto" ,marginRight:"auto", marginBottom:"auto",maxWidth:"320px"}} className="relative rounded-2lg  p-5  ">
+                      <h3 className="mb-3 text-lg font-semibold leading-none ">METAKUL {index + 1}</h3>
                       <div className="flex justify-center space-x-5">
                         {/* Add your other content here */}
                       </div>

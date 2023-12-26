@@ -12,6 +12,7 @@ import Mywallet from './pages/OwnerNFt';
 import KYCPage from './pages/KycPage';
 import Career from './pages/Career';
 import Mint from './pages/MintPage';
+import CreateNFT from './pages/CreateNft';
 export default function Router() {
 
     const routes = useRoutes([
@@ -28,6 +29,7 @@ export default function Router() {
                 { path: 'career', element: <Career /> },
                 { path: 'wallet', element: <Mywallet /> },
                 { path: 'mint', element: <Mint /> },
+                { path: 'create', element: <CreateNFT /> },
             ]
         },
     ]);

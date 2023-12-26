@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import {  Paper,  Chip, Button } from "@mui/material";
+import {  Paper,  Chip, Button, Typography } from "@mui/material";
 
 import {
   useContract,
@@ -47,9 +47,10 @@ const Mint = () => {
         className="featuredlaunch_rightCol"
         style={{ justifyContent: "center", alignItems: "center" }}
       >
-        <div className="featuredLaunch_name HeadingText">
-          MetaKul NFT Mint
-        </div>
+             <Typography variant="h1">
+
+MetaKul NFT Mint
+</Typography>
         <img
           src="https://media.discordapp.net/attachments/954642077340278825/1019585636375732285/6tckjj.gif"
           alt="NFT"
@@ -78,21 +79,9 @@ const Mint = () => {
         }}
       >
         <div className=" containerMint">
-          <div style={{ marginBottom: "55px", padding: "0 16px" }}>
-            <renderCounter></renderCounter>
-            <h4 style={{ marginBottom: "5px" }}>
-              Please follow the steps to switch to Polygon’s Mainnet:
-            </h4>
-            <h4 style={{ marginBottom: "5px" }}>
-              1. Navigate to{" "}
-              <a style={{ color: "green" }} href="https://polygonscan.com/">
-                polygonscan.com{" "}
-              </a>
-            </h4>
-            <h4>2. Scroll down to the bottom of the page and click on the button Add Polygon Network</h4>
-          </div>
+       
           <h3>Your Owned NFT</h3>
-          <p style={{ color: "white", marginTop: "0px", fontWeight: "bold" }}>
+          <p style={{  marginTop: "0px", fontWeight: "bold" }}>
             ( Will Load After Mint )
           </p>
           <NftBoxGrid>

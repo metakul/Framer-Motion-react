@@ -139,8 +139,8 @@ const Footer = () => {
             <script>
               document.write(new Date().getFullYear())
             </script>
-            Xhibiter — Made by
-            <a href="https://deothemes.com" className="hover:text-accent dark:hover:text-white">DeoThemes</a></span>
+            METAKUL — DEVELOPED VIA
+            <a href="https://deothemes.com" className="hover:text-accent dark:hover:text-white"> REACT, MUI, TAILWINDCSS</a></span>
           <ul className="flex flex-wrap space-x-4 text-sm dark:text-jacarta-400">
             <li><a href="#" className="hover:text-accent dark:hover:text-white">Terms and conditions</a></li>
             <li><a href="#" className="hover:text-accent dark:hover:text-white">Privacy policy</a></li>
