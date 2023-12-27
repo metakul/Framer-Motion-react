@@ -105,7 +105,6 @@
     }
     .featuredlaunch_container {
         padding: 35px;
-        background-color: black;
          display: flex;
         gap: 20px;
         justify-content: center;
@@ -135,19 +134,6 @@
     min-width: 10rem;
 }
 
-
-@media only screen and (max-width: 767px) {
-    .featuredlaunch_container {
-        background: radial-gradient( at bottom left, rgb(13 14 100 / 61%), transparent 1300px ), radial-gradient(at bottom right, rgb(36 110 119), transparent 1500px), radial-gradient(at center left, rgba(33, 29, 43, 1), transparent 1300px), radial-gradient(at center right, rgb(206 206 206), transparent 1800px), radial-gradient(at top right, rgba(97, 120, 104, 1), transparent 400px), radial-gradient(at top left, rgb(225 225 230), transparent 2000px);
-    }
-    .featuredlaunch_leftCol{
-
-    }
-
-
-
-
-}
 
 .nftBoxGrid {
     width: 1200px;

@@ -39,12 +39,10 @@ ItemContainer {
     align-items: center;
     flex-direction: column;
     color: #fff;
-    background: linear-gradient(90.71deg, #1b295c 5%, #020c10 50%);
     height: 50px
 }
 
 .MetaKulHeading {
-    background: linear-gradient(90.71deg, #73e0a9 0%, #5b68df 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin: 5px;

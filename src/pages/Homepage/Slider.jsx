@@ -47,7 +47,7 @@ const NftSlider = () => {
                 <div className="animate-gradient--no-text-fill block animate-gradient overflow-hidden rounded-2.5xl !bg-clip-border p-[2px] text-center shadow-md transition-shadow hover:shadow-lg">
                   <div style={{backgroundColor:theme.palette.colors.colors.primary[900]}} className="rounded-[1.125rem] ">
                     <figure className="relative my-4 mb-14">
-                      <img src={image} alt={`item ${index + 1}`} className="swiper-lazy inline-block" height="320" width="320" />
+                      <img src={image} alt={`item ${index + 1}`} className="swiper-lazy inline-block h-half" height="220" width="320" />
                       <div className="swiper-lazy-preloader"></div>
                     </figure>
                     <div style={{backgroundColor:theme.palette.colors.colors.primary[800], marginLeft:"auto" ,marginRight:"auto", marginBottom:"auto",maxWidth:"320px"}} className="relative rounded-2lg  p-5  ">

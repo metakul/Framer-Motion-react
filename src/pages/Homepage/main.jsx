@@ -112,7 +112,7 @@ const HtmlViewer = () => {
             <div className="flex space-x-8">
               <StyledTypography
                 component="a"
-                href="kyc"
+                href="create"
                 className="w-36 rounded-full bg-accent py-3 px-8 text-center font-semibold  shadow-accent-volume transition-all hover-bg-accent-dark"
               >
                 Upload

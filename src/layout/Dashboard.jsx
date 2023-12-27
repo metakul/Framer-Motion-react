@@ -11,11 +11,12 @@ import { useMediaQuery, useTheme } from "@mui/material";
 const APP_BAR_MOBILE = 92;
 const APP_BAR_DESKTOP = 92;
 
-const StyledRoot = styled("div")({
+const StyledRoot = styled("div")(({ theme }) => ({
     display: "flex",
     minHeight: "100%",
     overflow: "hidden",
-});
+    backgroundColor:theme.palette.background.default
+}));
 
 const Main = styled("div")(({ theme }) => ({
     flexGrow: 1,
@@ -35,7 +36,7 @@ export default function DashboardLayout() {
 
     return (
         <>
-            <StyledRoot>
+            <StyledRoot theme={theme}>
                 <Topbar
                     isSidebarOpen={isSidebarOpen}
                     isNonMobile={isNonMobile}

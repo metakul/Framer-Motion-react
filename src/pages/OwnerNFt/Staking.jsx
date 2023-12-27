@@ -1,59 +1,99 @@
 
 import mockData from "./mockData.json"
 import { ThirdwebSDK } from "@thirdweb-dev/sdk";
-import { useAddress } from "@thirdweb-dev/react";
+import { useAddress, useOwnedNFTs, useTokenBalance } from "@thirdweb-dev/react";
 import { useContract, useContractRead, useContractWrite } from "@thirdweb-dev/react";
 import React, { useState, useEffect } from 'react';
 import { Web3Button } from "@thirdweb-dev/react";
 import { Button, useTheme } from "@mui/material";
+import { BigNumber, ethers } from "ethers";
 // If used on the FRONTEND pass your 'clientId'
 const sdk = new ThirdwebSDK("polygon", {
   clientId: "ed7a4b64885c72be1dc347066f4e51ce",
 });
 
-const contract = await sdk.getContract("0x710E9161e8A768c0605335AB632361839f761374");
+const nftDropContractAddress = "0x710E9161e8A768c0605335AB632361839f761374"
+const tokenContractAddress = "0xE9fd323D7B1e4cFd07C657E218F7da16efd6532f"
+const stakingContractAddress = "0x7615Cc203dDe705bFD65C42CEAcA7e15eB41b11b"
+
 
 const Mywallet = () => {
-  const walletAddress = useAddress();
+  const address = useAddress();
+  const theme = useTheme()
   const [balance, setBalance] = useState(null);
   const [loading, setLoading] = useState(true); // New loading state
-  const { stakingcontract } = useContract("0x7615Cc203dDe705bFD65C42CEAcA7e15eB41b11b");
-  const theme=useTheme()
-  const { mutateAsync: stake, isLoading } = useContractWrite(stakingcontract, "stake")
+  const { contract: nftDropContract } = useContract(
+    nftDropContractAddress,
+    "nft-drop"
+  );
+  const { contract: tokenContract } = useContract(
+    tokenContractAddress,
+    "token"
+  );
+  const { contract, isLoading } = useContract(stakingContractAddress);
+  const { data: ownedNfts } = useOwnedNFTs(nftDropContract, address);
+  const { data: tokenBalance } = useTokenBalance(tokenContract, address);
+  const { data: stakedTokens } = useContractRead(contract, "getStakeInfo", [
+    address,
+  ]);
+  const [claimableRewards, setClaimableRewards] = useState();
+
   useEffect(() => {
     const fetchBalance = async () => {
       try {
-        const nfts = await contract.erc721.getOwned(walletAddress);
-        setBalance(nfts);
-        setLoading(false); // Set loading to false once data is fetched
-        console.log("Balance:", nfts);
+        if (address && nftDropContract) {
+          const nfts = await nftDropContract.erc721.getOwned(address);
+          setBalance(nfts);
+          setLoading(false);
+          const stakeInfo = await contract?.call("getStakeInfo", [address]);
+          setClaimableRewards(stakeInfo[1]);
+          console.log("Balance:", nfts);
+        }
       } catch (error) {
         console.error("Error fetching balance:", error);
         setLoading(false); // Set loading to false in case of an error
       }
     };
 
-    // Check if walletAddress is not null before fetching balance
-    if (walletAddress !== null && contract) {
+    // Check if address is not null before fetching balance
+    if (address !== null && nftDropContract) {
       setLoading(true); // Set loading to true before fetching data
       fetchBalance();
     }
-  }, [walletAddress, contract]);
 
+  }, [address, nftDropContract]);
 
-  const callStaking = async (tokenId) => {
-    try {
-      console.log(tokenId)
-      const data = await stake({ args: [tokenId] });
-      console.info("contract call successs", data);
-    } catch (err) {
-      console.error("contract call failure", err);
+  async function stakeNft(id) {
+    if (!address) return;
+
+    const isApproved = await nftDropContract?.isApproved(
+      address,
+      stakingContractAddress
+    );
+    if (!isApproved) {
+      await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
     }
+    await contract?.call("stake", [[id]]);
   }
-  return (
-    <main className="pt-[3.5rem] lg:pt-8">
-      <h2 className="mb-2 font-display text-4xl font-medium  dark:text-white"> NFT Staking</h2>
 
+
+  return (
+    <main className="pt-[3.5rem] lg:pt-4">
+      <h2 className="mb-2 font-display text-4xl font-medium  dark:text-white"> NFT Staking</h2>
+      <h4 >
+                Claimable Balance: <b>
+                  {!claimableRewards
+                    ? "Loading..."
+                    : ethers.utils.formatUnits(claimableRewards, 18)}
+                </b>{" "}
+                {tokenBalance?.symbol}
+              </h4>
+              <Web3Button
+            action={(contract) => contract.call("claimRewards")}
+            contractAddress={stakingContractAddress}
+          >
+            Claim Rewards
+          </Web3Button>
 
 
       <section className="relative py-12">
@@ -71,7 +111,7 @@ const Mywallet = () => {
                 ) : balance && balance.length > 0 ? (
                   balance.map((item, index) => (
                     <article key={index}>
-                      <div className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" style={{backgroundColor:theme.palette.colors.colors.primary[900]}}>
+                      <div className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" style={{ backgroundColor: theme.palette.colors.colors.primary[900] }}>
                         <figure className="relative">
                           <a href={item.metadata.name}>
                             <img
@@ -101,7 +141,6 @@ const Mywallet = () => {
                                 />
                               </svg>
                             </span>
-                            <span className="text-sm dark:text-jacarta-200">188</span>
                           </div>
                         </figure>
                         <div className="mt-7 flex items-center justify-between">
@@ -162,15 +201,12 @@ const Mywallet = () => {
 
                         </div>
                         <div className="mt-8 flex items-center justify-between">
-                          <Web3Button
-                            contractAddress="0x7615Cc203dDe705bFD65C42CEAcA7e15eB41b11b"
-                            action={(contract) => {
-                              contract.call("stake", [[32]])
-                            }}
-                          >
-                            stake
-                          </Web3Button>
-
+                        <Web3Button
+                          contractAddress={stakingContractAddress}
+                          action={() => stakeNft(item.metadata.id)}
+                        >
+                          Stake
+                        </Web3Button>
                           <a href={item.historyLink} className="group flex items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +232,7 @@ const Mywallet = () => {
                 ) : (
                   <>
                     <article>
-                      <div style={{background:theme.palette.colors.colors.primary[900]}} className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" >
+                      <div style={{ background: theme.palette.colors.colors.primary[900] }} className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" >
                         <figure className="relative">
                           <img
                             src="./img/products/item_3.jpg"
@@ -204,7 +240,7 @@ const Mywallet = () => {
                             className="w-full rounded-[0.625rem]"
                             loading="lazy"
                           />
-                          <div style={{background:theme.palette.colors.colors.primary[500]}}
+                          <div style={{ background: theme.palette.colors.colors.primary[500] }}
                             className="absolute top-3 right-3 flex items-center space-x-1 rounded-md  p-2 dark:bg-jacarta-700"
                           >
                             <span
@@ -246,14 +282,14 @@ const Mywallet = () => {
                             data-bs-toggle="modal"
                             data-bs-target="#buyNowModal"
                           >
-                            Buy One Now
+                            Buy on Opensea
                           </button>
                           <div
                             className="font-display text-sm font-semibold text-accent"
                             data-bs-toggle="modal"
                             data-bs-target="#buyNowModal"
                           >
-                            Buy One Now
+                            Join Discord
                           </div>
 
                         </div>

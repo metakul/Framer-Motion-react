@@ -25,7 +25,6 @@ export const MintButtonContainer = styled("div")`
 
 export const Card = styled(Paper)`
   display: inline-block;
-  background-color: var(--card-background-lighter-color) !important;
   margin: auto;
   padding: 10px;
   margin-left: 5px;

@@ -73,7 +73,6 @@ export default function Nav({
            backgroundRepeat: "no-repeat",
            marginTop: "75px",
            borderRadius: 4,
-           height: "85%",
            paddingBottom:"40px"
          },
        }}

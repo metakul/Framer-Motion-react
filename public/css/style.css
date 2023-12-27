@@ -56,6 +56,10 @@ b,
 strong {
   font-weight: bolder;
 }
+img{
+  width: 100%;
+  height: auto;
+}
 code,
 kbd,
 pre,

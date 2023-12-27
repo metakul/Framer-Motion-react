@@ -27,7 +27,7 @@ const theme=useTheme()
                   className="text-fill-transparent inline-block bg-gradient-to-r from-[#FFE993] to-[#FFB770] bg-clip-text font-display text-5xl font-semibold"
                   >1M+</span >
               </div>
-              <span className="text-lg ">Active Users Goals</span>
+              <span className="text-lg ">Active User Goals</span>
             </div>
             <div>
               <div>
