@@ -7,6 +7,10 @@ import React, { useState, useEffect } from 'react';
 import { Web3Button } from "@thirdweb-dev/react";
 import { Button, useTheme } from "@mui/material";
 import { BigNumber, ethers } from "ethers";
+import DotLoader from "react-spinners/DotLoader";
+
+
+
 // If used on the FRONTEND pass your 'clientId'
 const sdk = new ThirdwebSDK("polygon", {
   clientId: "ed7a4b64885c72be1dc347066f4e51ce",
@@ -22,6 +26,7 @@ const Mywallet = () => {
   const theme = useTheme()
   const [balance, setBalance] = useState(null);
   const [loading, setLoading] = useState(true); // New loading state
+  const [stakeNftLoader, setStakeNftLoader] = useState(false)
   const { contract: nftDropContract } = useContract(
     nftDropContractAddress,
     "nft-drop"
@@ -46,7 +51,10 @@ const Mywallet = () => {
           setBalance(nfts);
           setLoading(false);
           const stakeInfo = await contract?.call("getStakeInfo", [address]);
-          setClaimableRewards(stakeInfo[1]);
+          if(stakeInfo[1]){
+
+            setClaimableRewards(stakeInfo[1]);
+          }
           console.log("Balance:", nfts);
         }
       } catch (error) {
@@ -64,6 +72,7 @@ const Mywallet = () => {
   }, [address, nftDropContract]);
 
   async function stakeNft(id) {
+    setStakeNftLoader(true)
     if (!address) return;
 
     const isApproved = await nftDropContract?.isApproved(
@@ -74,6 +83,8 @@ const Mywallet = () => {
       await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
     }
     await contract?.call("stake", [[id]]);
+    setStakeNftLoader(false)
+
   }
 
 
@@ -111,7 +122,7 @@ const Mywallet = () => {
                 ) : balance && balance.length > 0 ? (
                   balance.map((item, index) => (
                     <article key={index}>
-                      <div className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" style={{ backgroundColor: theme.palette.colors.colors.primary[900] }}>
+                      <div className="block ml-2 rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" style={{ backgroundColor: theme.palette.colors.colors.primary[900] }}>
                         <figure className="relative">
                           <a href={item.metadata.name}>
                             <img
@@ -201,12 +212,24 @@ const Mywallet = () => {
 
                         </div>
                         <div className="mt-8 flex items-center justify-between">
+                        {stakeNftLoader ? (
+              <div>
+                <DotLoader
+                  loading={stakeNftLoader}
+                  size={50}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                />
+              </div>
+            ) :(
+
                         <Web3Button
                           contractAddress={stakingContractAddress}
                           action={() => stakeNft(item.metadata.id)}
                         >
                           Stake
                         </Web3Button>
+            )}
                           <a href={item.historyLink} className="group flex items-center">
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
