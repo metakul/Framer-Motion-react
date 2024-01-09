@@ -8,7 +8,7 @@ import { Web3Button } from "@thirdweb-dev/react";
 import { Button, useTheme } from "@mui/material";
 import { BigNumber, ethers } from "ethers";
 import DotLoader from "react-spinners/DotLoader";
-
+import toast from "react-hot-toast";
 
 
 // If used on the FRONTEND pass your 'clientId'
@@ -25,7 +25,7 @@ const Mywallet = () => {
   const address = useAddress();
   const theme = useTheme()
   const [balance, setBalance] = useState(null);
-  const [loading, setLoading] = useState(true); // New loading state
+  const [loading, setLoading] = useState(false); // New loading state
   const [stakeNftLoader, setStakeNftLoader] = useState(false)
   const { contract: nftDropContract } = useContract(
     nftDropContractAddress,
@@ -72,8 +72,8 @@ const Mywallet = () => {
   }, [address, nftDropContract]);
 
   async function stakeNft(id) {
-    setStakeNftLoader(true)
     if (!address) return;
+    const toastId = toast.loading('Processing...');
 
     const isApproved = await nftDropContract?.isApproved(
       address,
@@ -82,8 +82,14 @@ const Mywallet = () => {
     if (!isApproved) {
       await nftDropContract?.setApprovalForAll(stakingContractAddress, true);
     }
-    await contract?.call("stake", [[id]]);
-    setStakeNftLoader(false)
+   const stakeStart= await contract?.call("stake", [[id]]).then((res)=>{
+     toast.success(`#${id} NFT staked succcessfully`, { id: toastId })
+    const nfts = nftDropContract.erc721.getOwned(address);
+    setBalance(nfts);
+   }).catch((err)=>{
+    toast.error("Error staking nft", { id: toastId })
+   })
+    console.log(stakeStart)
 
   }
 
@@ -117,7 +123,7 @@ const Mywallet = () => {
           <div className="tab-content">
             <div className="tab-pane fade show active" id="items" role="tabpanel" aria-labelledby="items-tab">
               <div className="grid grid-cols-1 gap-[1.875rem] md:grid-cols-2 lg:grid-cols-4">
-                {loading ? (
+                {loading && address ? (
                   <div className="text-center">Loading...</div>
                 ) : balance && balance.length > 0 ? (
                   balance.map((item, index) => (
@@ -215,7 +221,7 @@ const Mywallet = () => {
                         {stakeNftLoader ? (
               <div>
                 <DotLoader
-                  loading={stakeNftLoader}
+                  loading={true}
                   size={50}
                   aria-label="Loading Spinner"
                   data-testid="loader"

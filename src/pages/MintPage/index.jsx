@@ -9,10 +9,11 @@ import {
   useOwnedNFTs,
 } from "@thirdweb-dev/react";
 import { Web3Button, useContractWrite } from "@thirdweb-dev/react";
-
+import toast from "react-hot-toast"
 import "./style.css";
 
 import { Card, Timer, Timer1, MintButtonContainer, NftBoxGrid } from "./MintPage.css"
+import { useNavigate } from 'react-router-dom';
 
 const myNftDropContractAddress = 0x710E9161e8A768c0605335AB632361839f761374
 const override = {
@@ -21,9 +22,12 @@ const override = {
   borderColor: "red",
 };
 const Mint = () => {
+  const navigate=useNavigate()
   const address = useAddress();
   const [claimNft, setClaimNft] = useState(false)
   const { contract: nftDrop } = useContract(myNftDropContractAddress);
+  const [mintMsg,setMintMsg]=useState("")
+const [discordLink, setDiscordLink] = useState("");
 
 
   const allowlistProof = {
@@ -48,14 +52,29 @@ const Mint = () => {
 
   const handleClaimNft = async () => {
     try {
+      if(!address){
+        toast.error("Wallet not connected")
+        return 
+      }
       setClaimNft(true)
-      console.log("starting")
-      const data = await claim({ args: [address, 1, "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 0, allowlistProof, []] });
+      const toastId = toast.loading('Processing...');
+      setMintMsg("Minting.. You will be notified soon. Till then you can explore the website")
+      const data = await claim({ args: [address, 1, "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee", 0, allowlistProof, []] }).then((res)=>{
+        toast.success("NFT Claimed Successfully", { id: toastId })
+        setClaimNft(false)
+        setMintMsg("Mint Successfull")
+        setDiscordLink("https://discord.gg/thirdweb");
+      }).catch(err=> { toast.error("Error Claiming NFT", { id: toastId })  
+       setClaimNft(false)
+        setMintMsg("Mint Failed. Need helping debugging? Join our :");
+        setDiscordLink("https://discord.gg/thirdweb");
+      })
       console.info("contract call successs", data);
-      setClaimNft(false)
+     
     } catch (err) {
       console.error("contract call failure", err);
       setClaimNft(false)
+     
     }
   }
 
@@ -78,7 +97,7 @@ const Mint = () => {
         />
         <MintButtonContainer>
           <div style={{ marginTop: "10px" }}>
-            {claimNft ? (
+            {claimNft && setClaimNft ? (
               <div>
                 <DotLoader
                   loading={claimNft}
@@ -92,11 +111,14 @@ const Mint = () => {
                 <button className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold  shadow-accent-volume transition-all hover:bg-accent-dark"
                   onClick={handleClaimNft}> Claim NFT</button>
               )
-
             }
 
 
           </div>
+          {mintMsg ? <><p>{mintMsg}</p>  <button
+                            className=" w-full rounded-xl px-5 py-2 text-left font-display text-sm "
+                          ><a href={discordLink} target="_blank" >Discord</a>
+                          </button> </> : <></>}
         </MintButtonContainer>
       </div>
       <div

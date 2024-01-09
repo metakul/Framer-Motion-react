@@ -12,7 +12,7 @@ import {
   smartWallet,
 } from "@thirdweb-dev/react";
 import Routers from "./routes";
-
+import { Toaster } from "react-hot-toast";
 const secretKey =
   "JpSxBi9l35njYqaiIIy9CH6JNtj4yXLHxxzEoQrmRp_9SD5JJhFCM37wlelE-8OXz6tKo4fsaiz5pRN5D_lYkw";
 
@@ -53,8 +53,8 @@ export default function App() {
         <ThemeProvider theme={theme}>
           <CssBaseline />
           <div className="app">
-            {/* <Toaster
-              position="bottom-right"
+            <Toaster
+              position="top-center"
               reverseOrder={false}
               toastOptions={{
                 style: {
@@ -64,7 +64,7 @@ export default function App() {
                   color: secondaryColor,
                 },
               }}
-            /> */}
+            />
 
             <Router>
               <Routers />

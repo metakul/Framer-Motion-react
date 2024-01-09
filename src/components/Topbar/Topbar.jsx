@@ -7,6 +7,7 @@ import {
   DarkModeOutlined,
   Menu as MenuIcon,
   Search,
+  Image,
 } from "@mui/icons-material";
 import {
   AppBar,
@@ -165,7 +166,9 @@ const Topbar = ({
             p="0.1rem 0.5rem"
           >
             <IconButton  onClick={openHomePage} >
-              METAKUL
+            <Image>
+              <img src="img/metakul_logo.jpg" />
+            </Image>
             </IconButton>
           </FlexBetween>
         </FlexBetween>
