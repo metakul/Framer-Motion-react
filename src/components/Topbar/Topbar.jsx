@@ -182,7 +182,7 @@ const Topbar = ({
           </IconButton>
            
             <div className="flex justify-between items-center  md:mt-0 lg:mt-0  ">
-              <Button
+{/*               <Button
                 className=" "
                 id="demo-customized-button"
                 aria-controls={open}
@@ -206,9 +206,9 @@ const Topbar = ({
                     </div>
                   </div>
                 </div>
-              </Button>
+              </Button> */}
 
-              <StyledMenu
+{/*               <StyledMenu
                 id="demo-customized-menu"
                 MenuListProps={{
                   "aria-labelledby": "demo-customized-button",
@@ -221,12 +221,9 @@ const Topbar = ({
                 <div className="text-gray font-black text-sm tracking-wide pb-9">
                   Hi WEB3 User!
                 </div>
-                {/* {smartWalletAddress && ( */}
             
 
-                {/* )} */}
-
-                {/* <Menus onClick={handleClose} disableRipple
+                <Menus onClick={handleClose} disableRipple
                   sx={{
                       '&:hover': {
                           background: "#1C2438",
@@ -234,7 +231,7 @@ const Topbar = ({
                   }}>
                   <EditIcon />
                   Edit
-              </Menus> */}
+              </Menus>
                 <Paper>
                   <StyledMenuItem colors={colors}>
                     <Avatar>
@@ -263,7 +260,7 @@ const Topbar = ({
                 </Paper>
 
                
-              </StyledMenu>
+              </StyledMenu> */}
             </div>
             <IconButton >
             <ConnectWallet/>
