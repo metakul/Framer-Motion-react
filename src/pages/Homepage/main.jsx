@@ -223,14 +223,14 @@ const HtmlViewer = () => {
           {/* Second Grid Item */}
           <Grid
             item
-            xs={12}
-            sm={8}
+            xs={5}
+            sm={5}
             md={5}
             lg={5}
             className="col-span-6 text-center flex flex-center">
             <StyledTypography className="relative text-center sm:text-right">
               <svg
-                viewBox="0 0 120 120"
+                viewBox="0 0 180 180"
                 xmlns="http://www.w3.org/2000/svg"
                 className="mt-2 inline-block w-72 rotate-[8deg] sm:w-full lg:w-[24rem] xl:w-[35rem]"
               >
@@ -248,7 +248,7 @@ const HtmlViewer = () => {
                 </defs>
                 <g clipPath="url(#clipping)">
                   <image
-                    href="img/hero/hero.jpg"
+                    href="metakul/nfts/38.png"
                     width="160"
                     height="160"
                     clip-path="url(#clipping)"

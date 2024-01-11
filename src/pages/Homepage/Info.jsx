@@ -12,7 +12,7 @@ const theme=useTheme()
         <picture
           className="pointer-events-none absolute inset-0 -z-10 after:absolute after:bottom-0 after:h-1/3 after:w-full after:bg-gradient-to-t after:from-[#010107]"
         >
-          <img src="img/gradient_creative.jpg" alt="gradient" className="h-full w-full -scale-y-100" />
+          <img src="metakul/nfts/35.png" alt="gradient" className="h-full w-full -scale-y-100" />
         </picture>
         <div className="container mt-20 lg:pb-32">
         
@@ -60,7 +60,7 @@ const theme=useTheme()
           <div className="items-center justify-between lg:flex">
 
             <div className="relative text-center lg:w-1/2">
-              <img src="img/nft-game/robot_large_1.png" alt="" loading="lazy" className="relative -top-10 inline-block" />
+              <img src="metakul/nfts/35.png" alt="" loading="lazy" className="relative -top-10 inline-block" />
               <img src="img/hero/3D_elements.png" alt="" loading="lazy" className="absolute top-10 animate-fly" />
             </div>
 

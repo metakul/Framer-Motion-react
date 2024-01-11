@@ -19,11 +19,11 @@ const NftSlider = () => {
   const theme=useTheme()
 
   const images = [
-    'img/nft-game/nft_game_character_1.png',
-    'img/nft-game/nft_game_character_2.png',
-    'img/nft-game/nft_game_character_3.png',
-    'img/nft-game/nft_game_character_4.png',
-    'img/nft-game/nft_game_character_5.png',
+    'metakul/nfts/31.png',
+    'metakul/nfts/9.png',
+    'metakul/nfts/42.png',
+    'metakul/nfts/1.png',
+    'metakul/nfts/17.png',
   ];
 
   return (

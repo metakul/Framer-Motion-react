@@ -157,10 +157,10 @@ border-radius: 250px;
 
 // Styled Logo
 export const StyledLogo = styled("img")`
-width: 50px;
+width: 60%;
 
 @media (min-width: 1000px) {
-  width: 50px;
+  width: 60%;
 }
 
 transition: width 0.5s;

@@ -13,7 +13,7 @@ import toast from "react-hot-toast"
 import "./style.css";
 
 import { Card, Timer, Timer1, MintButtonContainer, NftBoxGrid } from "./MintPage.css"
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const myNftDropContractAddress = 0x710E9161e8A768c0605335AB632361839f761374
 const override = {
@@ -112,14 +112,16 @@ const [discordLink, setDiscordLink] = useState("");
                   onClick={handleClaimNft}> Claim NFT</button>
               )
             }
-
-
           </div>
           {mintMsg ? <><p>{mintMsg}</p>  <button
                             className=" w-full rounded-xl px-5 py-2 text-left font-display text-sm "
                           ><a href={discordLink} target="_blank" >Discord</a>
                           </button> </> : <></>}
         </MintButtonContainer>
+        <Link to="/wallet">
+            <button className="inline-block rounded-full bg-accent py-3 px-8 text-center font-semibold  shadow-accent-volume transition-all hover:bg-accent-dark"
+                  > Already Claimed? Stake Now</button>
+            </Link>
       </div>
       <div
         className="featuredlaunch_leftCol "
