@@ -163,12 +163,10 @@ const Topbar = ({
           <FlexBetween
             borderRadius="9px"
             gap="0rem"
-            p="0.1rem 0.5rem"
+            p="0.1rem 0.1rem"
           >
             <IconButton  onClick={openHomePage} >
-            <Image>
-              <img src="img/metakul_logo.jpg" />
-            </Image>
+              <img src="metakul/logo/darkLogo.png"  style={{height:"50px"}}/>
             </IconButton>
           </FlexBetween>
         </FlexBetween>
