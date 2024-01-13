@@ -119,7 +119,7 @@ const MetakulCollection = () => {
                       <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
                     </svg>
                   </span>
-                  <span className="font-bold">2.55</span>
+                  <span className="font-bold">0</span>
                 </div>
                 <div className="text-2xs font-medium tracking-tight dark:text-jacarta-400">Floor Price</div>
               </div>
@@ -144,7 +144,7 @@ const MetakulCollection = () => {
                       <path fill="#62688F" d="M959.8 1397.6v441.7l540.1-760.6z" />
                     </svg>
                   </span>
-                  <span className="font-bold">17.2K</span>
+                  <span className="font-bold">0 K</span>
                 </div>
                 <div className="text-2xs font-medium tracking-tight dark:text-jacarta-400">Volume Traded</div>
               </div>
