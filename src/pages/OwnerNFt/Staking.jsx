@@ -264,7 +264,7 @@ const Mywallet = () => {
                       <div style={{ background: theme.palette.colors.colors.primary[900] }} className="block rounded-2.5xl border border-jacarta-100  p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700" >
                         <figure className="relative">
                           <img
-                            src="./img/products/item_3.jpg"
+                            src="./metakul/products/item_3.jpg"
                             alt="img"
                             className="w-full rounded-[0.625rem]"
                             loading="lazy"

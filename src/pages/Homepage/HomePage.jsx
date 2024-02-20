@@ -10,7 +10,7 @@ const HomePage = () => {
     <div>
        
       <MainPage/>
-      <Partner/>
+      {/* <Partner/> */}
 
       
     </div>

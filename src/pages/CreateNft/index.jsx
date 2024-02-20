@@ -119,7 +119,7 @@ function Home() {
                 {selectedFile ? (
                     <img alt="Uploaded Preview" src={selectedFile} style={{ maxWidth: '100%', maxHeight: '300px' }} />
                 ) : (
-                    <s.StyledLogo alt={"Demo Image"} src={"/img/metakul_logo.png"} />
+                    <s.StyledLogo alt={"Demo Image"} src={"/metakul/metakul_logo.png"} />
                 )}
              
             </s.UploadLabel>
