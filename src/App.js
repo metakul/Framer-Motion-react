@@ -28,16 +28,6 @@ export default function App() {
   const colors = tokens(theme.palette.mode);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate a delay (e.g., API call, fetching data)
-    const delay = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    // Clear the timeout on component unmount
-    return () => clearTimeout(delay);
-  }, []);
-
   // Access the primary color from your theme
   const primaryColor = colors.grey[900];
   const secondaryColor = colors.primary[100];
