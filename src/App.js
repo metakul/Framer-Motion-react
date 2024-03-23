@@ -31,7 +31,15 @@ export default function App() {
   // Access the primary color from your theme
   const primaryColor = colors.grey[900];
   const secondaryColor = colors.primary[100];
+  useEffect(() => {
+    // Simulate a delay (e.g., API call, fetching data)
+    const delay = setTimeout(() => {
+      setLoading(false);
+    }, 20);
 
+    // Clear the timeout on component unmount
+    return () => clearTimeout(delay);
+  }, []);
   return (
     <div>
       {loading ? <Preloader /> : (
